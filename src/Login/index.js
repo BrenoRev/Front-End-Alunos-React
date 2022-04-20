@@ -8,6 +8,7 @@ export default function Login() {
             <Title>Login
                 <p>Breno</p>
                 <p>lorem</p>
+                <button>Enviar</button>
             </Title>
         </Container>
     )
