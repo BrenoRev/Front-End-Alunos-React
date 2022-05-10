@@ -1,22 +1,17 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import axios from '../../services/axios';
 
 import { Title } from './styled'
 import { Container } from '../../styles/GlobalStyles'
-import axios from '../../services/axios';
-
+import * as exampleActions from '../../store/modules/example/actions';
 export default function Login() {
 
     const dispatch = useDispatch();
 
     function handleClick(e)  {
         e.preventDefault();
-        dispatch(
-            { 
-                type: 'ADD_TODO',
-                payload: 'teste' 
-            }
-            );
+        dispatch(exampleActions.clicaBotao());
    }
 
 
