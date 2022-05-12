@@ -6,8 +6,6 @@ import { useSelector } from 'react-redux';
 
 export default function Header() {
 
-    const botaoClicado = useSelector(state => state.example.botaoClicado);
-
     return (
 
        <Nav> 
@@ -15,12 +13,12 @@ export default function Header() {
                 <FaHome size={24} />
             </Link>
 
-            <Link to="/login">
+            <Link to="/register">
                 <FaUserAlt size={24} />
             </Link>
 
-            <Link to="/logout">
-            {botaoClicado ? <FaSignOutAlt size={24}/> : ''}
+            <Link to="/login">
+                <FaSignOutAlt size={24}/>
             </Link>
             
        </Nav>
