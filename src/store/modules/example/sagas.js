@@ -2,10 +2,11 @@ import { call, put, all, takeLatest } from 'redux-saga/effects'
 import { toast } from 'react-toastify';
 import * as actions from './actions'
 import * as types from '../types';
+
 const requisicao = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
-            resolve('ok')
+            resolve()
         }, 2000);
     })
 };
