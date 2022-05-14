@@ -8,7 +8,6 @@ import { Form } from './styled'
 import { Container } from '../../styles/GlobalStyles'
 import history from '../../services/history';
 
-import * as exampleActions from '../../store/modules/example/actions';
 
 export default function Register() {
     const [name, setName] = useState('');
@@ -17,7 +16,6 @@ export default function Register() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(name, email, password)
 
         let formErrors = false;
 
@@ -31,9 +29,9 @@ export default function Register() {
         }
         if(email.length < 6 || email.length > 255) {
             formErrors = true;
-            toast.error('O email deve ter entre 6 e 255 caracteres');
+            toast.error('O e-mail deve ter entre 6 e 255 caracteres');
         }
-        
+
         if(formErrors)
             return;
         
@@ -66,10 +64,10 @@ export default function Register() {
                         onChange={e => setName(e.target.value)}/>
                 </label>
                 
-                <label htmlFor="email">Email:
+                <label htmlFor="email">E-mail:
                     <input 
                         type="email" 
-                        placeholder="Email:" 
+                        placeholder="E-mail:" 
                         value={email} 
                         onChange={e => setEmail(e.target.value)}/>
                 </label>

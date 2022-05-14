@@ -5,7 +5,6 @@ import { get } from 'lodash';
 import { FaUserCircle, FaEdit, FaWindowClose } from 'react-icons/fa';
 import { AlunoContainer, ProfilePicture } from './styled';
 import { Container } from '../../styles/GlobalStyles';
-import * as exampleActions from '../../store/modules/example/actions';
 import { Link } from 'react-router-dom';
 
 export default function Alunos() {
