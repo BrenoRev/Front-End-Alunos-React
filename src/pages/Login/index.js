@@ -30,7 +30,7 @@ export default function Login() {
             return;
 
         try{
-            dispatch(actions.loginRequest( {email, password} ));
+            dispatch(actions.loginRequest( {email, password } ));
         } catch(error){
             const errors = get(error, 'response.data.errors', []);
             errors.map(error => toast.error(error));
