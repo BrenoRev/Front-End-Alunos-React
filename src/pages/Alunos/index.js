@@ -4,7 +4,7 @@ import axios from '../../services/axios';
 import { get } from 'lodash';
 import { FaUserCircle, FaExclamation, FaEdit, FaWindowClose } from 'react-icons/fa';
 import { AlunoContainer, ProfilePicture, NovoAluno } from './styled';
-import { Container } from '../../styles/GlobalStyles';
+import { Container, Title } from '../../styles/GlobalStyles';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -53,7 +53,7 @@ export default function Alunos() {
 
     return (
         <Container>
-            <h1> Alunos </h1>
+            <Title> Alunos </Title>
 
             <NovoAluno to="/aluno/">
                 Novo Aluno

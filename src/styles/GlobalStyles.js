@@ -58,3 +58,9 @@ export const Container = styled.div`
     border-radius: 4px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 `;
+
+export const Title = styled.h1 `
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+`

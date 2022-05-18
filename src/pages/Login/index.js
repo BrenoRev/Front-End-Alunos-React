@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import axios from '../../services/axios';
 
 import { Form } from './styled'
-import { Container } from '../../styles/GlobalStyles'
+import { Container, Title } from '../../styles/GlobalStyles'
 import * as actions from '../../store/modules/auth/actions';
 import { toast } from 'react-toastify';
 import { get } from 'lodash';
@@ -40,7 +40,7 @@ export default function Login() {
 
     return (
         <Container>
-            <h1> Login </h1>
+            <Title> Login </Title>
             
              <Form onSubmit={handleSubmit}>
                 

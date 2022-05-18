@@ -20,7 +20,7 @@ export default function Routers() {
       <Route exact path="/" element={<PrivateRoute />}>
         <Route exact path="/aluno/:id/edit" element={<Aluno />} />
         <Route exact path="/aluno/" element={<Aluno />} />
-        <Route exact path="/fotos:id" element={<Fotos />} />
+        <Route exact path="/fotos/:id" element={<Fotos />} />
       </Route>
 
 

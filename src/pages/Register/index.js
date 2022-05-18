@@ -6,8 +6,7 @@ import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { get } from 'lodash';
 import { Form } from './styled'
-import { Container } from '../../styles/GlobalStyles'
-import history from '../../services/history';
+import { Container, Title } from '../../styles/GlobalStyles'
 import * as actions from '../../store/modules/auth/actions';
 
 export default function Register() {
@@ -55,7 +54,7 @@ export default function Register() {
 
     return (
         <Container>
-            <h1> {id ? 'Editar dados' : 'Crie sua conta'} </h1>
+            <Title> {id ? 'Editar dados' : 'Crie sua conta'} </Title>
 
             <Form onSubmit={handleSubmit}>
                 <label htmlFor="name">Nome:
