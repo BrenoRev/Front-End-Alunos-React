@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import axios from '../../services/axios';
 import { get } from 'lodash';
 import { FaUserCircle, FaExclamation, FaEdit, FaWindowClose } from 'react-icons/fa';
-import { AlunoContainer, ProfilePicture } from './styled';
+import { AlunoContainer, ProfilePicture, NovoAluno } from './styled';
 import { Container } from '../../styles/GlobalStyles';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -54,6 +54,11 @@ export default function Alunos() {
     return (
         <Container>
             <h1> Alunos </h1>
+
+            <NovoAluno to="/aluno/">
+                Novo Aluno
+            </NovoAluno>
+
             <AlunoContainer>
                 {alunos.map((aluno,index) => (
                     <div key={String(aluno.id)}>
