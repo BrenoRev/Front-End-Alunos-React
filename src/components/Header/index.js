@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav } from './styled';
-import { FaHome, FaSignInAlt, FaSignOutAlt, FaUserAlt, FaCircle, FaPowerOff } from 'react-icons/fa';
+import { FaHome, FaExclamation, FaSignOutAlt, FaUserAlt, FaCircle, FaPowerOff } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch  } from 'react-redux';
 import * as actions from '../../store/modules/auth/actions';
@@ -40,7 +40,7 @@ export default function Header() {
             
 
             {isLoggedIn && <FaCircle size={24} color="#66ff33"/>}
-            
+
        </Nav>
 
     )
