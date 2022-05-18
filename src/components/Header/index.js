@@ -1,10 +1,21 @@
 import React from 'react';
 import { Nav } from './styled';
-import { FaHome, FaSignInAlt, FaSignOutAlt, FaUserAlt } from 'react-icons/fa';
+import { FaHome, FaSignInAlt, FaSignOutAlt, FaUserAlt, FaCircle, FaPowerOff } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch  } from 'react-redux';
+import * as actions from '../../store/modules/auth/actions';
+import history from '../../services/history';
 
 export default function Header() {
+
+    const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+    const dispatch = useDispatch();
+
+    const handleLogout = (event) => {
+        event.preventDefault();
+        dispatch(actions.loginFailure());
+        history.push('/');
+    }
 
     return (
 
@@ -17,9 +28,18 @@ export default function Header() {
                 <FaUserAlt size={24} />
             </Link>
 
-            <Link to="/login">
-                <FaSignOutAlt size={24}/>
-            </Link>
+            {isLoggedIn ? (
+                <Link onClick={handleLogout} to="/logout">
+                    <FaPowerOff size={24} />
+                </Link>
+                ) : (
+                <Link to="/login">
+                    <FaSignOutAlt size={24}/>
+                </Link>
+                )}
+            
+
+            {isLoggedIn && <FaCircle size={24} color="#66ff33"/>}
             
        </Nav>
 
